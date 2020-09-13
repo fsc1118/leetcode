@@ -1,0 +1,26 @@
+class Solution {
+   public static int[] closestDivisors(int num) {
+		 int k[] =new int[2];
+		 int p[] =new int[2];
+for (int i = (int)Math.sqrt(num+1);i>=1;i=i-1) {
+	if ((num+1)%i==0) {
+		k[0]=i;
+		k[1]=(num+1)/i;
+		break;
+	}
+}
+for (int t = (int)Math.sqrt(num+2);t>=1;t=t-1) {
+	if ((num+2)%t==0) {
+		p[0]=t;
+		p[1]=(num+2)/t;
+		break;
+	}
+}
+	if (Math.abs(k[0]-k[1])>Math.abs(p[0]-p[1])) {
+		return p;
+	}
+	else {
+		return k;
+	}
+	}
+}
