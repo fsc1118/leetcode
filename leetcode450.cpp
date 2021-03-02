@@ -27,11 +27,6 @@ class Solution {
             return root;
         return leftEnd(root->left);
     }
-    TreeNode* rightEnd(TreeNode* root){
-        if (root->right == 0)
-            return root;
-        return leftEnd(root->right);
-    }
 public:
     TreeNode* deleteNode(TreeNode* root, int key) {
         /*special case*/
